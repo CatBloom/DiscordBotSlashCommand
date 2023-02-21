@@ -1,0 +1,14 @@
+version: '3'
+services:
+  go:
+    container_name: DiscordApi
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 8080:8080
+    command: sleep infinity
+    working_dir: /go/src/work
+    volumes:
+      - .:/go/src/work
+    tty: true
