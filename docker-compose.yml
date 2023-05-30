@@ -5,9 +5,9 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+      target: dev
     ports:
       - 8080:8080
-    command: sleep infinity
     working_dir: /go/src/work
     volumes:
       - .:/go/src/work
